@@ -50,9 +50,11 @@ def load_weather_data(filename, db):
     for _, row in df.iterrows():
         weather_data = WeatherData(
             date=row["date"],
-            max_temperature=row["max_temperature"] if is_valid_value(row["max_temperature"]) else None,
-            min_temperature=row["min_temperature"] if is_valid_value(row["min_temperature"]) else None,
-            precipitation=row["precipitation"] if is_valid_value(row["precipitation"]) else None,
+            # store temperature in degrees C
+            max_temperature=row["max_temperature"]/10 if is_valid_value(row["max_temperature"]) else None,
+            min_temperature=row["min_temperature"]/10 if is_valid_value(row["min_temperature"]) else None,
+            # store precipitation in centimeters
+            precipitation=row["precipitation"]/10000 if is_valid_value(row["precipitation"]) else None,
             weather_station_id=weather_station_id
         )
         db.add(weather_data)
