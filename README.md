@@ -1,5 +1,7 @@
 # How to run this project
 
+## Note: See  [architecture.md] (architecture.md) for "Design Process and Consideration"
+
 ## Step 1: 
 Create a virtual environment and install the requirement file: 
 
