@@ -13,6 +13,8 @@ RUN pip install -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
+EXPOSE 8000
+
 # Specify the command to run on container start
-CMD ["python", "-m", "uvicorn", "weather_monitor.main:app"]
+CMD ["python", "-m", "uvicorn", "--host", "0.0.0.0", "weather_monitor.main:app"]
 

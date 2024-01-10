@@ -15,7 +15,7 @@ class WeatherDataSchema(pydantic.BaseModel):
         float, Body(description="Average maximum temperature in degrees Celsius")
     ]
     precipitation: Annotated[
-        float, Body(description="Average minimum temperature in centimeters")
+        float, Body(description="Total precipitation in centimeters")
     ]
 
 
@@ -30,5 +30,5 @@ class WeatherDataAnalysisSchema(pydantic.BaseModel):
         float, Body(description="Average maximum temperature in degrees Celsius")
     ]
     total_precipitation: Annotated[
-        float, Body(description="Average minimum temperature in centimeters")
+        float, Body(description="Total precipitation in centimeters")
     ]
