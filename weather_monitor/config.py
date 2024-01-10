@@ -1,15 +1,11 @@
-import secrets
-from typing import Any, Dict, Optional
+from typing import Any, Optional
 
 from pydantic_core.core_schema import ValidationInfo
 from pydantic_settings import BaseSettings
-from pydantic import validator, PostgresDsn, field_validator
+from pydantic import PostgresDsn, field_validator
 
-
-#from pydantic import AnyHttpUrl, BaseSettings, EmailStr, HttpUrl, PostgresDsn, validator
 
 class Settings(BaseSettings):
-
     POSTGRES_SERVER: str
     POSTGRES_USER: str
     POSTGRES_PASSWORD: str

@@ -18,16 +18,16 @@ def test_read_weather():
     # First item should be dictionary with expected keys
     assert isinstance(first_item, dict)
     assert set(first_item.keys()) == {
-        'id',
-        'weather_station_name',
-        'date',
-        'precipitation',
-        'max_temperature',
-        'min_temperature'
+        "id",
+        "weather_station_name",
+        "date",
+        "precipitation",
+        "max_temperature",
+        "min_temperature",
     }
 
-    # ensure results are floating point
     print(first_item)
+
 
 def test_read_stats():
     response = client.get("/api/weather/stats")
@@ -42,11 +42,11 @@ def test_read_stats():
     # First item should be dictionary with expected keys
     assert isinstance(first_item, dict)
     assert set(first_item.keys()) == {
-        'id',
-        'weather_station_name',
-        'year',
-        'total_precipitation',
-        'avg_max_temperature',
-        'avg_min_temperature'
+        "id",
+        "weather_station_name",
+        "year",
+        "total_precipitation",
+        "avg_max_temperature",
+        "avg_min_temperature",
     }
     print(first_item)

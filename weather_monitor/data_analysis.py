@@ -1,9 +1,17 @@
-from fastapi import FastAPI, HTTPException, Depends
-from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey, MetaData, Table, text
-from sqlalchemy.orm import declarative_base, sessionmaker, Session
-from fastapi.responses import JSONResponse
+from sqlalchemy import (
+    create_engine,
+    Column,
+    Integer,
+    String,
+    Float,
+    ForeignKey,
+    MetaData,
+    Table,
+    text,
+)
+from sqlalchemy.orm import Session
 
-from weather_monitor.database_engine import SessionLocal, engine
+from weather_monitor.database_engine import SessionLocal
 
 
 truncate_sql = """
@@ -30,9 +38,9 @@ group by
 
 # FastAPI endpoint to calculate and return statistics
 def calculate_statistics(db: Session):
-   db.execute(text(truncate_sql))
-   db.execute(text(build_sql))
-   db.commit()
+    db.execute(text(truncate_sql))
+    db.execute(text(build_sql))
+    db.commit()
 
 
 def run_analysis():

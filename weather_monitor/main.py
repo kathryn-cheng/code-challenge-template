@@ -1,4 +1,4 @@
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import FastAPI
 from weather_monitor.api_route import router
 
 app = FastAPI()
