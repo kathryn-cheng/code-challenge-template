@@ -263,3 +263,10 @@ Our container image should then be pushed to Amazon Elastic Container Registry (
 Elastic Container Service (ECS) Fargate cluster, and we can deploy our application container to fargate instances. We can then
 expose the API using either AWS API Gateway or an AWS Elastic Load Balancer. This can provide a managed SSL certificate
 for security.
+
+This project deployed to AWS using Fargate with ELB, it is accessible at below URLs: 
+- API endpoints:
+  - https://weather-monitor.mycutesheep.com/api/weather/
+  - https://weather-monitor.mycutesheep.com/api/weather/stats
+- Swagger Documentation
+  - https://weather-monitor.mycutesheep.com/docs
