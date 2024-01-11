@@ -58,7 +58,7 @@ python -m weather_monitor.data_analysis
 ```
 After run the script, check the table weather_analysis has data present. 
 
-## Step 7: Unit test
+## Step 7: Integration test
 ```shell
 pytest weather_monitor_tests/test_api.py -s    
 ```
